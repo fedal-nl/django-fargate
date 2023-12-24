@@ -1,0 +1,47 @@
+{
+    "family": "DjangoFargateTask_v8",
+    "containerDefinitions": [
+        {
+            "name": "API-v13",
+            "image": "302305848501.dkr.ecr.eu-central-1.amazonaws.com/django-fargat-app:v1.4",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "api-v13-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/DjangoFargateTask_v8",
+                    "awslogs-region": "eu-central-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            }
+        }
+    ],
+    "taskRoleArn": "arn:aws:iam::302305848501:role/ECS_TASK_ROLE_AWS_SERVICES",
+    "executionRoleArn": "arn:aws:iam::302305848501:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "ARM64",
+        "operatingSystemFamily": "LINUX"
+    }
+}

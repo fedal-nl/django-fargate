@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-h7qwlwyk1s%-%6%&ys)ly17n4dz(03rj93_dy-kymd2-g44*gz
 DEBUG = True
 
 # only for testing fargate
-print("version 1.9")
+print("version 1.6")
 
 ALLOWED_HOSTS = ['*']
 ALLOWED_CIDR_NETS = ['172.31.0.0/20']

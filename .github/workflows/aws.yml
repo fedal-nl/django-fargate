@@ -6,7 +6,7 @@ name: Deploy Demo App on ECS
 env:
     AWS_REGION: eu-central-1 # set this to your preferred AWS region, e.g. us-west-1
     ECR_REPOSITORY: 302305848501.dkr.ecr.eu-central-1.amazonaws.com/django-fargat-app # set this to your Amazon ECR repository name
-    ECS_SERVICE: DjangoFargateService_v8 # set this to your Amazon ECS service name
+    ECS_SERVICE: DjangoFargateService_V9 # set this to your Amazon ECS service name
     ECS_CLUSTER: djangoFargateCluster # set this to your Amazon ECS cluster name
     ECS_TASK_DEFINITION: DjangoFargateTask-AWS-CLI-input.json # set this to the path to your Amazon ECS task definition
     CONTAINER_NAME: API-v14
@@ -34,7 +34,7 @@ jobs:
           id: build-image
           env:
             ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-            IMAGE_TAG: v1.4
+            IMAGE_TAG: v1.5
           run: |
             # Build a docker container and
             # push it to ECR so that it can

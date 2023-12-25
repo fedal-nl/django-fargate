@@ -8,8 +8,8 @@ env:
     ECR_REPOSITORY: 302305848501.dkr.ecr.eu-central-1.amazonaws.com/django-fargat-app # set this to your Amazon ECR repository name
     ECS_SERVICE: DjangoFargateService_v8 # set this to your Amazon ECS service name
     ECS_CLUSTER: djangoFargateCluster # set this to your Amazon ECS cluster name
-    ECS_TASK_DEFINITION: DjangoFargateTask_v8-revision1-AWS-CLI-input.json # set this to the path to your Amazon ECS task definition
-    CONTAINER_NAME: API-v13
+    ECS_TASK_DEFINITION: DjangoFargateTask-AWS-CLI-input.json # set this to the path to your Amazon ECS task definition
+    CONTAINER_NAME: API-v14
 jobs:
     deploy:
       name: Deploy
